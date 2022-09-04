@@ -1,0 +1,23 @@
+<button (click)="showAlert()">Click</button>
+<cdk-virtual-scroll-viewport itemSize="20" style="height:80vh">
+    <table border="1">
+        <thead style="position:sticky; top:0">
+            <tr>
+                <th>index</th>
+                <th>item</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *cdkVirtualFor="let item of numbers; index as i" >
+                <td>{{i}}</td>
+                <td>{{item}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--<ul>
+        <li *cdkVirtualFor="let item of numbers; index as i" >{{item}}</li>
+    </ul>-->
+</cdk-virtual-scroll-viewport>
+<!--<ul>
+    <li *ngFor="let item of numbers; index as i">{{item}}</li>
+</ul>-->
